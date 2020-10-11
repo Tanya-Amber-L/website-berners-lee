@@ -84,7 +84,7 @@ section.presentation h2 {
 }
 
 section.presentation p {
-    font-size: 20px;
+    font-size: 18px;
     text-align: justify;
     margin: 15px;
 }
@@ -119,11 +119,11 @@ section.social-medias ul {
     list-style-type: none;
 
     padding: 20px;
-    font-size: 20px;
 }
 
 section.social-medias li {
     padding: 0px 20px;
+    font-size: 18px;
 }
 
 section.social-medias li a {
@@ -153,6 +153,7 @@ section.movies section.movie-box {
 
 section.movies section.movie-box div.text {
     padding-left: 20px;
+    font-size: 18px;
 }
 
 
