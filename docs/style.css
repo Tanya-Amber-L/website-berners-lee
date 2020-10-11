@@ -159,11 +159,11 @@ section.movies section.movie-box div.text {
 
 /*Responsive design*/
 
-@media screen and (max-width: 640px) {
+@media screen and (min-width: 640px) {
 
     section.global {
-        margin-left: 5%;
-        margin-right: 5%;
+        margin-left: 0px;
+        margin-right: 0px;
     }
 
     section.social-medias ul {
