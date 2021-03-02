@@ -4,186 +4,142 @@
     margin: 0px;
     padding: 0px;
 }
-
 body {
     background-color: rgb(235, 235, 235);
+    width: 100vw;
+    max-width: 100%;
+}
+.global {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     font-family: "Open Sans", Arial, Helvetica, sans-serif;
     color: rgb(123, 129, 135);
+    font-size: 16px;
 }
-
-
-/* Creation of Margins*/
-
-section.global {
-    margin-right: 25%;
-    margin-left: 25%;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
-/*Creation of the three sections*/
-
-section.presentation {
+.presentation, .social-medias, .movies {
     background-color: white;
     border: none;
     border-radius: 6px;
-    padding: 20px;
+    padding: 30px;
     margin: 20px 0px;
-
-    text-align: center;
-
-    min-width: 240px;
-    max-width: 600px;
-}
-
-section.social-medias {
-    background-color: white;
-    border: none;
-    border-radius: 6px;
-    padding: 20px;
-    margin: 20px 0px;
-
-    min-width: 240px;
-    max-width: 600px;
-
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-
-section.movies {
-    background-color: white;
-    border: none;
-    border-radius: 6px;
-    padding: 20px;
-    margin: 20px 0px;
-
-    min-width: 240px;
-    max-width: 600px;
-}
-
-
-/*Styling elements in the presentation section*/
-
-section.presentation img {
-    margin: 20px;
-    border-radius: 100%;
-    border: 3px solid rgb(215,215,215);
+    width: 500px;
 }
 
 h1 {
     color: rgb(221, 85, 83);
-    font-size: 30px;
+    font-size: 28px;
     font-weight: 800;
 }
-
-section.presentation h2 {
+h2 {
     font-weight: 600;
-    font-size: 25px;
+    font-size: 22px;
+    padding: 20px;
+}
+h3 {
+    font-weight: 600;
+    font-size: 20px;
 }
 
-section.presentation p {
-    font-size: 18px;
-    text-align: justify;
+/* presentation */
+.presentation {
+    text-align: center;
+    line-height: 30px;
+}
+.presentation.button {
     margin: 15px;
 }
-
-a.button {
+.presentation img {
+    margin: 20px;
+    border-radius: 100%;
+    border: 3px solid rgb(215,215,215);
+}
+.presentation p {
+    text-align: justify;
+}
+.button {
     background-color: rgb(221, 85, 83);
-    color: white;
+    border: none;
     border-radius: 4px;
     padding: 10px;
     text-decoration: none;
-    
-    font-size: 18px;
-    font-weight: 600;
-
-    transition: 0.5s;
+    transition: 0.3s;
 }
-
-a.button:hover {
+.button a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 18px;
+}
+.button:hover {
     background-color: rgb(200, 50, 50);
 }
 
 
-/*Styling elements in the social medias section*/
-
-section.social-medias ul {
+/* medias */
+.social-medias ul {
     display: flex;
-    flex-direction: row;
     justify-content: center;
-    align-items: center;
-    text-align: center;
-
     list-style-type: none;
-
     padding: 20px;
 }
-
-section.social-medias li {
+.social-medias li {
     padding: 0px 20px;
     font-size: 18px;
 }
-
-section.social-medias li a {
-    text-decoration: none;
+.social-medias li a {
     color: rgb(123, 129, 135);
-}
-
-section.social-medias li a:hover {
-    font-weight: 600;
-}
-
-
-/*Styling elements in the movies section*/
-
-section.movies h2 {
-    font-weight: 600;
-    font-size: 25px;
-    text-align: center;
-    padding: 20px;
-}
-
-section.movies section.movie-box {
+    text-decoration: none;
     display: flex;
-    flex-direction: row;
-    padding: 20px 10px;
+    flex-direction: column;
+    align-items: center;
+    transition: 0.3s;
+}
+.social-medias li a:hover {
+    color: rgb(200, 50, 50);
 }
 
-section.movies section.movie-box div.text {
+
+/* movies */
+.movies h2 {
+    text-align: center;
+}
+.movie-box {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+.movie-box .text {
     padding-left: 20px;
     font-size: 18px;
+    text-align: justify;
+    line-height: 30px;
 }
-
+.movie-box .text h3{
+    text-align: center;
+}
 
 /*Responsive design*/
 
-@media screen and (max-width: 640px) {
-
-    section.global {
-        margin-left: 0px;
-        margin-right: 0px;
+@media screen and (max-width: 768px) {
+    .presentation, .social-medias, .movies {
+        width: 80%;
     }
 
-    section.social-medias ul {
-        display: flex;
+}
+@media screen and (max-width: 480px) {
+    .presentation, .social-medias, .movies {
+        width: 90%;
+    }
+    .social-medias ul {
         flex-direction: column;
+        padding: 0;
     }
-    
-    section.social-medias li {
-        margin: 30px;
+    .social-medias li {
+        padding: 20px;
     }
-
-    section.movies section.movie-box {
-        display: flex;
+    .movie-box {
         flex-direction: column;
         align-items: center;
-    }
-
-    section.movies section.movie-box div.text {
-        padding-left: 0px;
-        text-align: justify;
-        margin: 20px;
     }
 }
